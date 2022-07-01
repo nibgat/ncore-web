@@ -1,6 +1,6 @@
 <p align="center">
     <img
-        width="650"
+        width="450"
         height="450"
         src="https://ncore.nibgat.space/assets/images/darklogo.png"
     />
