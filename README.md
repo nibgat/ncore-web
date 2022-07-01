@@ -5,7 +5,7 @@
         src="https://ncore.nibgat.space/assets/images/darklogo.png"
     />
     <br/>
-    <h2>NİBGAT® | NCore Web Component Library</h2>
+    <h2 style="text-align: center; width: 100%;">NİBGAT® | NCore Web Component Library</h2>
     <br/>
     <br/>
 </p>
