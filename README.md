@@ -1,9 +1,4 @@
 <p align="center">
-    <img
-        width="450"
-        height="450"
-        src="https://ncore.nibgat.space/assets/images/darklogo.png"
-    />
     <br/>
     <span style="font-size: 24px; font-weight: bold; text-align: center; width: 100%;">NİBGAT® | NCore Web Component Library</span>
     <br/>
