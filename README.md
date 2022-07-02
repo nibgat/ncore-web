@@ -30,3 +30,7 @@ const App = () => {
     </NCoreProvider>;
 }
 ```
+
+### Discord
+
+<a href="https://discord.gg/fMgVPZknuM">NİBGAT® | Community</a>
