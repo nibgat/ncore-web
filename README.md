@@ -10,6 +10,13 @@
     <br/>
 </p>
 
+### Dependencies
+
+If you install with yarn these packages will already be installed.
+
+- react-jss
+- react-svg
+
 ### Base Library
 
 -   The library is exporting sample base components to be used in react project you can test it like this :
