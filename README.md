@@ -19,8 +19,19 @@
 ```js
 import {
     NCoreProvider,
+    useNCoreTheme,
     Button
 } from 'ncore-web';
+
+const Home = () => {
+    const {
+        activeTheme
+    } = useNCoreTheme();
+
+    return <div>
+        Welcome to Home Page. Your theme is: {activeTheme}
+    </div>;
+};
 
 const App = () => {
     return <NCoreProvider>
