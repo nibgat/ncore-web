@@ -10,6 +10,13 @@
     <br/>
 </p>
 
+### Dependencies
+
+If you install with yarn these packages will already be installed.
+
+- react-jss
+- react-svg
+
 ### Base Library
 
 -   The library is exporting sample base components to be used in react project you can test it like this :
@@ -19,8 +26,19 @@
 ```js
 import {
     NCoreProvider,
+    useNCoreTheme,
     Button
 } from 'ncore-web';
+
+const Home = () => {
+    const {
+        activeTheme
+    } = useNCoreTheme();
+
+    return <div>
+        Welcome to Home Page. Your theme is: {activeTheme}
+    </div>;
+};
 
 const App = () => {
     return <NCoreProvider>
@@ -30,3 +48,7 @@ const App = () => {
     </NCoreProvider>;
 }
 ```
+
+### Discord
+
+<a href="https://discord.gg/fMgVPZknuM">NİBGAT® | Community</a>

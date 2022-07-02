@@ -31,6 +31,12 @@ export default {
         },
         disabled: {
             control: "boolean"
+        },
+        spreadBehaviour: {
+            control: {
+                type: "select",
+                options: ["free", "baseline", "stretch"]
+            }
         }
     },
 } as Meta;
