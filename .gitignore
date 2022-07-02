@@ -4,3 +4,5 @@ lib
 storybook-static
 build-storybook.log
 /.history
+/docs
+/docs-build

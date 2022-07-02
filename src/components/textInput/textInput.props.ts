@@ -3,6 +3,7 @@ import {
 } from "react";
 
 interface ITextInputProps {
+    spreadBehaviour?: TextInputSpreadBehaviour;
     onChangeText?: (value: string) => void;
     clearEnabled?: boolean;
     initialValue?: string;
@@ -19,7 +20,10 @@ interface ITextInputProps {
     id: string;
 };
 
+export type TextInputSpreadBehaviour = "baseline" | "stretch" | "free";
+
 export type TextInputStylerParams = {
+    spreadBehaviour?: TextInputSpreadBehaviour;
     radiuses: NCore.RadiusesTokens;
     borders: NCore.BordersTokens;
     typography: NCore.Typography;

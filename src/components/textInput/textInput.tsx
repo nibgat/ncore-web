@@ -20,6 +20,7 @@ import {
 } from "../../assets/svgr";
 
 const textInputStyler = ({
+    spreadBehaviour,
     disabledStyle,
     typography,
     isFocused,
@@ -84,6 +85,7 @@ const textInputStyler = ({
 };
 
 const TextInput: FC<ITextInputProps> = ({
+    spreadBehaviour = "baseline",
     clearEnabled = false,
     onFocus: onFocusProp,
     onBlur: onBlurProp,
@@ -133,6 +135,7 @@ const TextInput: FC<ITextInputProps> = ({
         clear
     } = textInputStyler({
         disabledStyle: designTokensDisabled,
+        spreadBehaviour,
         typography,
         isFocused,
         multiline,
