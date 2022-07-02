@@ -13,11 +13,11 @@ const useStyles = createUseStyles({
         outline: "none",
         "&:hover": {
             transition: "transform 0.1s",
-            cursor: "pointer",
+            cursor: props => props.disabled ? "no-drop" : "pointer",
             opacity: 0.75
         },
         "&:active": {
-            transform: "translateY(1px)",
+            transform: props => props.disabled ? "none" : "translateY(1px)",
             transition: "transform 0.1s"
         }
     }

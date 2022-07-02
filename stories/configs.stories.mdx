@@ -1,0 +1,212 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Docs/Getting Started/Configs" />
+
+# Configs
+
+##### Example Themes Config
+
+```tsx
+import {
+    NCoreProvider,
+    PageContainer,
+    useNCoreTheme
+} from "ncore-web";
+
+// If you want it to auto suggest the values you added, you can do it like this:
+declare namespace NCore {
+	interface Colors {
+        myColor: string;
+    }
+
+    interface Typography {
+        myFont: NCore.Typography
+    }
+};
+
+const MOCK_THEMES = [
+    {
+        key: "light",
+        typography: {
+            body: {
+                fontFamily: "Montserrat-Black",
+                lineHeight: 1.1,
+                fontSize: 16
+            },
+            header1: {
+                fontFamily: "Montserrat-Regular",
+                lineHeight: 2,
+                fontSize: 50,
+	        },
+            myFont: {
+                fontFamily: "My-Font",
+                lineHeight: 1.2,
+                fontSize: 24
+            }
+        },
+        colors: {
+            primary: "black",
+            secondary: "white",
+            myColor: "#4d78ca"
+        }
+    }
+];
+
+const NavigationHomePage = () => {
+    const {
+        typography,
+        colors
+    } = useNCoreTheme();
+
+    return <PageContainer>
+        <span
+            style={{
+                color: colors.myColor,
+                ...typography["myFont"]
+            }}
+        >
+            Hello
+        </span>
+    </PageContainer>;
+};
+
+const App = () => {
+    return <NCoreProvider
+        configs={{
+            themes: MOCK_THEMES,
+            // You can send a another config at the same time.
+        }}
+    >
+        <NavigationHomePage/>
+    </NCoreProvider>;
+};
+export default App;
+```
+
+##### Example Design Tokens Config
+
+```tsx
+import {
+    NCoreProvider,
+    PageContainer,
+    useNCoreTheme
+} from "ncore-web";
+
+// If you want it to auto suggest the values you added, you can do it like this:
+declare namespace NCore {
+	interface SpacesTokens {
+        mySpace: number;
+    }
+};
+
+const MOCK_DESIGN_TOKENS = {
+    spaces: {
+        container: 20,
+        content: 10,
+        inline: 2,
+        mySpace: 12
+    },
+    radiuses: {
+        hard: 8
+    }
+};
+
+const NavigationHomePage = () => {
+    const {
+        spaces
+    } = useNCoreTheme();
+
+    return <PageContainer>
+        <span
+            style={{
+                padding: spaces.mySpace
+            }}
+        >
+            Hello
+        </span>
+    </PageContainer>;
+};
+
+const App = () => {
+    return <NCoreProvider
+        configs={{
+            designTokens: MOCK_DESIGN_TOKENS,
+            // You can send a another config at the same time.
+        }}
+    >
+        <NavigationHomePage/>
+    </NCoreProvider>;
+};
+export default App;
+```
+
+##### Example Locales Config
+
+```tsx
+import {
+    useNCoreLocale,
+    NCoreProvider,
+    PageContainer
+} from "ncore-web";
+
+// If you want it to auto suggest the values you added, you can do it like this:
+declare namespace NCore {
+	interface Translation {
+        "my-word-key": string;
+    }
+};
+
+const MOCK_LOCALES = [
+    "code": "es",
+    "isRTL": "false",
+    "translations": {
+        "app-name": "NCore Web",
+        "my-word-key": "My Word"
+    }
+];
+
+const NavigationHomePage = () => {
+    const {
+        localize
+    } = useNCoreLocale();
+
+    return <PageContainer>
+        <span>
+            {localize("my-word-key")}
+        </span>
+    </PageContainer>;
+};
+
+const App = () => {
+    return <NCoreProvider
+        configs={{
+            locales: MOCK_LOCALES,
+            // You can send a another config at the same time.
+        }}
+    >
+        <NavigationHomePage/>
+    </NCoreProvider>;
+};
+export default App;
+```
+
+##### Example Initial Keys
+
+```tsx
+import {
+    NCoreProvider,
+    PageContainer
+} from "ncore-web";
+
+const App = () => {
+    return <NCoreProvider
+        configs={{
+            initialThemeKey: "light",
+            initialLanguage: "es"
+        }}
+    >
+        <NavigationHomePage/>
+    </NCoreProvider>;
+};
+export default App;
+```

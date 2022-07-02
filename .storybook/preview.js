@@ -12,9 +12,28 @@ export const parameters = {
     },
     options: {
         storySort: {
-            order: ['Docs', 'Getting Started', 'Components'],
-        },
-    },
+            order: [
+                'Docs',
+                [
+                    'Intro',
+                    'Getting Started',
+                    [
+                        'Quick Start',
+                        'Schemes',
+                        'Configs'
+                    ]
+                ],
+                'Components',
+                [
+                    'Text',
+                    'Button',
+                    'TextInput',
+                    '*'
+                ],
+                '*'
+            ]
+        }
+    }
 };
 
 export const decorators = [

@@ -63,6 +63,7 @@ const buttonStyler = ({
 
     if(spreadBehaviour === "baseline" || spreadBehaviour === "stretch") {
         container.alignSelf = spreadBehaviour;
+        container.width = spreadBehaviour === "stretch" ? "100%" : "auto"
     }
 
     if(disabled) {
@@ -105,7 +106,10 @@ const Button: FC<IButtonProps> = ({
     title,
     style
 }) => {
-    const classes = useStyles();
+    const classes = useStyles({
+        disabled
+    });
+
     const {
         disabled: disabledStyle,
         radiuses,
@@ -178,8 +182,8 @@ const Button: FC<IButtonProps> = ({
             className
         ].join(" ")}
         style={{
-            ...container,
-            ...style
+            ...style,
+            ...container
         }}
     >
         {renderIcon()}
