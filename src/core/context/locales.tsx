@@ -16,7 +16,6 @@ import {
     en
 } from "../locales";
 
-// @ts-ignore
 export const LocalesContext = createContext<LocalesStore>(LocalesStoreInitial);
 
 type LocalesProvider = {
@@ -61,7 +60,6 @@ const LocalesProvider: FC<LocalesProvider> = ({
         (state: LocalesStore, newValue: Partial<LocalesStore>) => ({
             ...state, ...newValue
         }),
-        // @ts-ignore
         LocalesStoreInitial,
         (initialState) => {
             const initialLanguagesData = prepareLocaleData(initialLanguage, locales);

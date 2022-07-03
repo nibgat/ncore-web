@@ -63,7 +63,7 @@ const buttonStyler = ({
 
     if(spreadBehaviour === "baseline" || spreadBehaviour === "stretch") {
         container.alignSelf = spreadBehaviour;
-        container.width = spreadBehaviour === "stretch" ? "100%" : "auto"
+        container.width = spreadBehaviour === "stretch" ? "100%" : "auto";
     }
 
     if(disabled) {

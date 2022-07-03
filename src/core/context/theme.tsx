@@ -18,7 +18,6 @@ import {
     mergeGivenDesignTokensWithNCore
 } from "../theme";
 
-// @ts-ignore
 export const ThemeContext = createContext<ThemeStore>(ThemeStoreInitial);
 
 type ThemeProvider = {
@@ -38,7 +37,6 @@ const ThemeProvider: FC<ThemeProvider> = ({
         (state: ThemeStore, newValue: ThemeStoreReducer) => ({
             ...state, ...newValue
         }),
-        // @ts-ignore
         ThemeStoreInitial,
         (initialState) => ({
             ...initialState,
