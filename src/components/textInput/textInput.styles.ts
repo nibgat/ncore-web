@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
         userSelect: "none",
         display: "flex",
         "&:hover": {
-            cursor: (props: { disabled: boolean; }) => props.disabled ? "no-drop" : "pointer"
+            cursor: "pointer"
         }
     },
     content: {
@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
         border: "none",
         width: "100%",
         "&:hover": {
-            cursor: (props: { disabled: boolean; }) => props.disabled ? "no-drop" : "text"
+            cursor: "text"
         }
     },
     multilineInput: {

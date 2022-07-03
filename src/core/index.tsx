@@ -7,6 +7,7 @@ import {
     NCoreConfig 
 } from "./types";
 import useStyles from "./style";
+import "./style";
 
 type NCoreProvider = {
     config?: NCoreConfig;

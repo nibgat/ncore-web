@@ -65,11 +65,13 @@ const buttonStyler = ({
         container.alignSelf = spreadBehaviour;
         container.width = spreadBehaviour === "stretch" ? "100%" : "auto";
     }
-
+    console.log("tt:", disabled);
     if(disabled) {
         container = {
             ...container,
-            ...disabledStyle
+            ...disabledStyle,
+            transform: "none",
+            cursor: "no-drop"
         };
     }
 
@@ -107,7 +109,7 @@ const Button: FC<IButtonProps> = ({
     style
 }) => {
     const classes = useStyles({
-        disabled
+        // disabled
     });
 
     const {
