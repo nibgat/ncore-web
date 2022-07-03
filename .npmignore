@@ -16,4 +16,4 @@ stories
 .prettierrc.js
 jest-setup.ts
 jest.config.js
-src
+docs-build
