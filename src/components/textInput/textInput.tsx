@@ -101,7 +101,6 @@ const TextInput: FC<ITextInputProps> = ({
     ...props
 }) => {
     const classes = useStyles({
-        // @ts-ignore
         disabled
     });
 
@@ -114,11 +113,15 @@ const TextInput: FC<ITextInputProps> = ({
         colors
     } = useNCoreTheme();
 
-    const inputRef = useRef(null);
+    const inputRef = useRef<HTMLInputElement>(null);
+    const inputTextAreaRef = useRef<HTMLTextAreaElement>(null);
 
     const onClickContainer = () => {
+        if(multiline && inputTextAreaRef.current) {
+            inputTextAreaRef.current.focus();
+        }
+        
         if(inputRef.current) {
-            // @ts-ignore
             inputRef.current.focus();
         }
     };
@@ -192,7 +195,7 @@ const TextInput: FC<ITextInputProps> = ({
                 disabled={disabled}
                 onFocus={onFocus}
                 onBlur={onBlur}
-                ref={inputRef}
+                ref={inputTextAreaRef}
                 onChange={(e) => {
                     if(onChangeText) onChangeText(e.target.value);
                     setValue(e.target.value);

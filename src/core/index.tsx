@@ -17,12 +17,12 @@ const NCoreProvider: FC<NCoreProvider> = ({
     children,
     config
 }) => {
-    // @ts-ignore
     const classes = useStyles();
 
     return <NCoreContext
         config={config}
     >
+        <span className={classes.hide}></span>
         {children}
     </NCoreContext>;
 };
