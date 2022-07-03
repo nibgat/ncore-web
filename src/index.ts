@@ -8,7 +8,9 @@ export {
 } from "./core/types";
 
 export {
-    Button
+    TextInput,
+    Button,
+    Text
 } from "./components";
 
 export {
