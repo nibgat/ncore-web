@@ -5,23 +5,30 @@ import {
     LocaleConfig 
 } from "../constants";
 
-export type PortalizedComponentProps = {
-    isVisible: boolean
+type PortalizedComponentProps = {
+    isVisible: boolean;
 };
 
-export interface INCoreIconProps {
+interface INCoreIconProps {
     color?: string;
     size?: number;
 };
 
-export type NCoreIcon = FC<INCoreIconProps>;
+type NCoreIcon = FC<INCoreIconProps>;
 
-export type NCoreConfig = {
+type NCoreConfig = {
     themes?: Array<NCore.Theme>;
     designTokens?: NCore.DesignTokens;
     locales?: Array<LocaleConfig>
     initialThemeKey?: NCore.ThemeKey;
     initialLanguage?: string;
+};
+
+export type {
+    PortalizedComponentProps,
+    INCoreIconProps,
+    NCoreConfig,
+    NCoreIcon
 };
 
 declare global {

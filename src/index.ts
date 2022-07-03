@@ -3,8 +3,8 @@ export {
     useNCoreTheme
 } from "./core/context";
 
-export type {
-    INCoreIconProps
+export {
+    type INCoreIconProps
 } from "./core/types";
 
 export {
