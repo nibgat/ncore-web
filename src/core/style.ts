@@ -1,7 +1,11 @@
 import {
     createUseStyles
 } from "react-jss";
+
 const useStyles = createUseStyles({
+    hide: {
+        display: "none"
+    },
     "@global": {
         "@font-face": [
             {

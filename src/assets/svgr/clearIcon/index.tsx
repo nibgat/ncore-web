@@ -3,11 +3,10 @@ import {
 } from "../../../core/types";
 
 const SvgClearIcon = ({
-    size,
+    size = 1,
     color,
     ...props
 }: INCoreIconProps) => {
-    // @ts-ignore
     const innerSizeRatio = (20 * size) - (16.67 * size);
     const location = innerSizeRatio / 2;
 

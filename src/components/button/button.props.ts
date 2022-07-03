@@ -6,7 +6,7 @@ import {
     NCoreIcon
 } from "../../core/types";
 
-interface IButtonProps extends Partial<Omit<HTMLButtonElement, "children">> {
+interface IButtonProps extends Partial<Omit<HTMLButtonElement, "children" | "style">> {
     displayBehaviourWhileLoading?: ButtonDisplayBehaviourWhileLoading;
     spreadBehaviour?: ButtonSpreadBehaviour;
     iconColor?: keyof NCore.Colors;
@@ -14,6 +14,7 @@ interface IButtonProps extends Partial<Omit<HTMLButtonElement, "children">> {
     color?: keyof NCore.Colors;
     titleStyle?: CSSProperties;
     variant?: ButtonVariant;
+    style?: CSSProperties;
     onPress: () => void;
     disabled?: boolean;
     loading?: boolean;
