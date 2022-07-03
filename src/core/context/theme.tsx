@@ -1,6 +1,7 @@
 import React, {
     createContext,
     useReducer,
+    ReactNode,
     useEffect,
     useState,
     Dispatch,
@@ -17,12 +18,14 @@ import {
     mergeGivenDesignTokensWithNCore
 } from "../theme";
 
+// @ts-ignore
 export const ThemeContext = createContext<ThemeStore>(ThemeStoreInitial);
 
 type ThemeProvider = {
     initialThemeKey?: NCore.ThemeKey;
     themes?: Array<NCore.Theme>;
     designTokens?: NCore.DesignTokens;
+    children: ReactNode;
 };
 
 const ThemeProvider: FC<ThemeProvider> = ({
@@ -35,6 +38,7 @@ const ThemeProvider: FC<ThemeProvider> = ({
         (state: ThemeStore, newValue: ThemeStoreReducer) => ({
             ...state, ...newValue
         }),
+        // @ts-ignore
         ThemeStoreInitial,
         (initialState) => ({
             ...initialState,
