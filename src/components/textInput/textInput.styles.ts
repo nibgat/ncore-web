@@ -8,6 +8,7 @@ const useStyles = createUseStyles({
         userSelect: "none",
         display: "flex",
         "&:hover": {
+            // @ts-ignore
             cursor: props => props.disabled ? "no-drop" : "pointer"
         }
     },
@@ -21,6 +22,7 @@ const useStyles = createUseStyles({
         border: "none",
         width: "100%",
         "&:hover": {
+            // @ts-ignore
             cursor: props => props.disabled ? "no-drop" : "text"
         }
     },

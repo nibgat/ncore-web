@@ -1,4 +1,3 @@
-import React from "react";
 import {
     INCoreIconProps
 } from "../../../core/types";
@@ -8,6 +7,7 @@ const SvgClearIcon = ({
     color,
     ...props
 }: INCoreIconProps) => {
+    // @ts-ignore
     const innerSizeRatio = (20 * size) - (16.67 * size);
     const location = innerSizeRatio / 2;
 
