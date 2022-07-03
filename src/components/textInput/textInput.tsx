@@ -1,6 +1,5 @@
-import React, {
+import {
     CSSProperties,
-    useEffect,
     useState,
     useRef,
     FC

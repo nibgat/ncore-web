@@ -1,4 +1,4 @@
-import React, {
+import {
     ReactNode,
     FC
 } from "react";
@@ -17,6 +17,7 @@ const NCoreProvider: FC<NCoreProvider> = ({
     children,
     config
 }) => {
+    // @ts-ignore
     const classes = useStyles();
 
     return <NCoreContext
