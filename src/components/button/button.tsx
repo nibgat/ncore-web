@@ -107,6 +107,7 @@ const Button: FC<IButtonProps> = ({
     style
 }) => {
     const classes = useStyles({
+        // @ts-ignore
         disabled
     });
 
@@ -181,6 +182,7 @@ const Button: FC<IButtonProps> = ({
             classes.container,
             className
         ].join(" ")}
+        // @ts-ignore
         style={{
             ...style,
             ...container

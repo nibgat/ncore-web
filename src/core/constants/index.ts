@@ -1,14 +1,14 @@
-export {
+export type {
     default as LocalesStoreInitial,
     useNCoreLocalizationReturnType,
     LocaleConfig,
     LocalesStore 
 } from "./locales";
-export {
+export type {
     DialogVariant,
     IDialogProps
 } from "./dialog";
-export {
+export type {
     default as ThemeStoreInitial,
     useNCoreThemeReturnType,
     ThemeStoreReducer,

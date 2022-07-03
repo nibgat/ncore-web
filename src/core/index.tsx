@@ -1,4 +1,5 @@
 import React, {
+    ReactNode,
     FC
 } from "react";
 import NCoreContext from "./context";
@@ -8,7 +9,8 @@ import {
 import useStyles from "./style";
 
 type NCoreProvider = {
-    config?: NCoreConfig
+    config?: NCoreConfig;
+    children: ReactNode;
 };
 
 const NCoreProvider: FC<NCoreProvider> = ({

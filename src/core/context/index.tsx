@@ -1,5 +1,6 @@
 import React, {
     useContext,
+    ReactNode,
     FC
 } from "react";
 import LocalesProvider, {
@@ -20,7 +21,8 @@ import {
 } from "../types";
 
 type NCoreContext = {
-    config?: NCoreConfig
+    config?: NCoreConfig;
+    children: ReactNode;
 };
 
 const NCoreContext: FC<NCoreContext> = ({

@@ -1,7 +1,7 @@
 {
     "name": "ncore-web",
-    "version": "0.1.10-alpha.5",
-    "description": "a boilerplate for creating react components library",
+    "version": "0.1.11-alpha.0",
+    "description": "NİBGAT® | Ncore - Web Component Library",
     "main": "lib/index.js",
     "module": "lib/index.esm.js",
     "scripts": {
@@ -20,12 +20,16 @@
         "url": "git+https://github.com/nibgat/ncore-web.git"
     },
     "keywords": [
+        "ncore",
+        "web",
+        "ncore-web",
+        "nibgat",
         "react",
         "library",
         "storybook",
         "components"
     ],
-    "author": "Chamsddine Bouzaiene",
+    "author": "nibgat",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/nibgat/ncore-web/issues"
