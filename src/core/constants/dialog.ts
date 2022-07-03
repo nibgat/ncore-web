@@ -3,7 +3,7 @@ import {
 } from "react";
 import {
     ButtonDisplayBehaviourWhileLoading
-} from "../../components/button/button";
+} from "../../components/button/button.props";
 import {
     PortalizedComponentProps 
 } from "../types";
