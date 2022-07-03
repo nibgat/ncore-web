@@ -64,7 +64,11 @@ const textInputStyler = ({
     if(disabled) {
         container = {
             ...container,
-            ...disabledStyle
+            ...disabledStyle,
+            cursor: "no-drop"
+        };
+        input = {
+            cursor: "no-drop"
         };
     }
 
@@ -101,7 +105,7 @@ const TextInput: FC<ITextInputProps> = ({
     ...props
 }) => {
     const classes = useStyles({
-        disabled
+        // disabled
     });
 
     const {
