@@ -19,7 +19,6 @@ Please visit for docs: [NCore Web](https://ncore.nibgat.space/web)
 If you install with yarn these packages will already be installed.
 
 - react-jss
-- react-svg
 
 ### Base Library
 
