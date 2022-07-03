@@ -19,7 +19,6 @@ import {
 } from "../../assets/svgr";
 
 const textInputStyler = ({
-    spreadBehaviour,
     disabledStyle,
     typography,
     isFocused,
@@ -102,6 +101,7 @@ const TextInput: FC<ITextInputProps> = ({
     ...props
 }) => {
     const classes = useStyles({
+        // @ts-ignore
         disabled
     });
 
@@ -118,6 +118,7 @@ const TextInput: FC<ITextInputProps> = ({
 
     const onClickContainer = () => {
         if(inputRef.current) {
+            // @ts-ignore
             inputRef.current.focus();
         }
     };
