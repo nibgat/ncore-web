@@ -1,9 +1,9 @@
 {
     "name": "ncore-web",
-    "version": "0.1.12-alpha.0",
+    "version": "0.1.12-alpha.1",
     "description": "NİBGAT® | Ncore - Web Component Library",
-    "main": "src/index.ts",
-    "module": "src/index.ts",
+    "main": "lib/index.js",
+    "module": "lib/index.js",
     "scripts": {
         "test": "jest",
         "test:watch": "jest --watch",
