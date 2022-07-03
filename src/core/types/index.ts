@@ -2,9 +2,6 @@ import {
     FC
 } from "react";
 import {
-    Props as SvgProps
-} from "react-svg";
-import {
     LocaleConfig 
 } from "../constants";
 
@@ -12,7 +9,7 @@ export type PortalizedComponentProps = {
     isVisible: boolean
 };
 
-export interface INCoreIconProps extends Omit<SvgProps, "src"> {
+export interface INCoreIconProps {
     color?: string;
     size?: number;
 };
