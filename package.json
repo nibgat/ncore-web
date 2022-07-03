@@ -1,6 +1,6 @@
 {
     "name": "ncore-web",
-    "version": "0.1.10-alpha.3",
+    "version": "0.1.10-alpha.4",
     "description": "a boilerplate for creating react components library",
     "main": "lib/index.js",
     "module": "lib/index.esm.js",
