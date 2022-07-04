@@ -105,6 +105,7 @@ const Button: FC<IButtonProps> = ({
     iconColor,
     className,
     loading,
+    onClick,
     title,
     style
 }) => {
@@ -181,6 +182,7 @@ const Button: FC<IButtonProps> = ({
             classes.container,
             className
         ].join(" ")}
+        onClick={disabled ? () => null : onClick}
         style={{
             ...style,
             ...container

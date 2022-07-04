@@ -15,7 +15,7 @@ interface IButtonProps extends Partial<Omit<HTMLButtonElement, "children" | "sty
     titleStyle?: CSSProperties;
     variant?: ButtonVariant;
     style?: CSSProperties;
-    onPress: () => void;
+    onClick: () => void;
     disabled?: boolean;
     loading?: boolean;
     size?: ButtonSize;
