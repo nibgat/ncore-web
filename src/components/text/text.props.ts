@@ -8,5 +8,6 @@ interface ITextProps {
     color?: keyof NCore.Colors;
     style?: CSSProperties;
     children?: ReactNode;
+    className?: string;
 };
 export default ITextProps;
