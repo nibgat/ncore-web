@@ -23,6 +23,8 @@ const useStyles = createUseStyles({
             transition: "transform 0.1s"
         }
     }
+}, {
+    name: "NCore-Button"
 });
 
 type ButtonStyle = {

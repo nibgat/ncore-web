@@ -23,7 +23,7 @@ export type DialogVariant = "yes-no" | "ok" | "info";
 
 type DialogButton = {
     title?: string;
-    onPress?: () => void;
+    onClick?: () => void;
     displayBehaviourWhileLoading?: ButtonDisplayBehaviourWhileLoading;
     loading?: boolean;
 };

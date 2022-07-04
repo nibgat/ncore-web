@@ -83,5 +83,7 @@ const useStyles = createUseStyles({
             background: "transparent"
         }
     }
+}, {
+    name: "NCore"
 });
 export default useStyles;
