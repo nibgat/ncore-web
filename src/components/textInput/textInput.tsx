@@ -68,6 +68,7 @@ const textInputStyler = ({
             cursor: "no-drop"
         };
         input = {
+            backgroundColor: "transparent",
             cursor: "no-drop",
             resize: "none"
         };
