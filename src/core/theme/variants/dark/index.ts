@@ -34,95 +34,95 @@ export const colors: Required<NCore.Colors> = {
 
 export const typography: Required<NCore.Typography> = {
     header1: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Light",
         fontWeight: 300,
         lineHeight: 1.3,
         fontSize: 48
     },
     header2: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Regular",
         fontWeight: 400,
         lineHeight: 1.3,
         fontSize: 32
     },
     header3: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Medium",
         fontWeight: 500,
         lineHeight: 1.3,
         fontSize: 26
     },
     header4: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Regular",
         fontWeight: 400,
         lineHeight: 1.3,
         fontSize: 22
     },
     header5: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         lineHeight: 1.3,
         fontSize: 22
     },
     header6: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Regular",
         fontWeight: 400,
         lineHeight: 1.3,
         fontSize: 18
     },
     header7: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Medium",
         fontWeight: 500,
         lineHeight: 1.3,
         fontSize: 16
     },
     header8: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         lineHeight: 1.3,
         fontSize: 14
     },
     header9: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         lineHeight: 1.3,
         fontSize: 12
     },
     body: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Regular",
         fontWeight: 400,
         lineHeight: 1.42,
         fontSize: 14
     },
     caption: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: -0.5,
         lineHeight: 1.2,
         fontSize: 10
     },
     buttonSmall: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: 0.5,
         lineHeight: 1.42,
         fontSize: 12
     },
     buttonMedium: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: 0.5,
         lineHeight: 1.42,
         fontSize: 14
     },
     buttonLarge: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: 0.5,
         lineHeight: 1.42,
         fontSize: 16
     },
     overline: {
-        fontFamily: "Montserrat",
+        fontFamily: "Montserrat-Regular",
         fontWeight: 400,
         textTransform: "uppercase",
         letterSpacing: 1,

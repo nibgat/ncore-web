@@ -1,1 +1,2 @@
 * Must be fix all @ts-ignore's.
+* initialLanguage not work correctly.
