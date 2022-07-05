@@ -13,3 +13,7 @@ export {
 export {
     default as Container
 } from "./container/container";
+
+export {
+    default as Switcher
+} from "./switcher/switcher";
