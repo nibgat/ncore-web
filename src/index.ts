@@ -10,6 +10,7 @@ export {
 export {
     Container,
     TextInput,
+    Switcher,
     Button,
     Text
 } from "./components";
