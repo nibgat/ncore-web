@@ -7,8 +7,15 @@ const useStyles = createUseStyles({
         display: "none"
     },
     "@global": {
+        "html, body, #root": {
+            flexWrap: "wrap",
+            height: "100%",
+            width: "100%"
+        },
         "*": {
-            transition: "all 0.5s"
+            transition: "all 0.5s",
+            padding: 0,
+            margin: 0
         },
         "::-webkit-scrollbar": {
             height: 9,

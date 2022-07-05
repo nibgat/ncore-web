@@ -8,6 +8,7 @@ export {
 } from "./core/types";
 
 export {
+    Container,
     TextInput,
     Button,
     Text

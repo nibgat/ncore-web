@@ -9,7 +9,7 @@ import { Meta } from '@storybook/addon-docs/blocks';
 ```tsx
 import {
     NCoreProvider,
-    PageContainer,
+    Container,
     useNCoreTheme
 } from "ncore-web";
 
@@ -58,7 +58,7 @@ const NavigationHomePage = () => {
         colors
     } = useNCoreTheme();
 
-    return <PageContainer>
+    return <Container>
         <span
             style={{
                 color: colors.myColor,
@@ -67,7 +67,7 @@ const NavigationHomePage = () => {
         >
             Hello
         </span>
-    </PageContainer>;
+    </Container>;
 };
 
 const App = () => {
@@ -88,7 +88,7 @@ export default App;
 ```tsx
 import {
     NCoreProvider,
-    PageContainer,
+    Container,
     useNCoreTheme
 } from "ncore-web";
 
@@ -116,7 +116,7 @@ const NavigationHomePage = () => {
         spaces
     } = useNCoreTheme();
 
-    return <PageContainer>
+    return <Container>
         <span
             style={{
                 padding: spaces.mySpace
@@ -124,7 +124,7 @@ const NavigationHomePage = () => {
         >
             Hello
         </span>
-    </PageContainer>;
+    </Container>;
 };
 
 const App = () => {
@@ -146,7 +146,7 @@ export default App;
 import {
     useNCoreLocale,
     NCoreProvider,
-    PageContainer
+    Container
 } from "ncore-web";
 
 // If you want it to auto suggest the values you added, you can do it like this:
@@ -170,11 +170,11 @@ const NavigationHomePage = () => {
         localize
     } = useNCoreLocale();
 
-    return <PageContainer>
+    return <Container>
         <span>
             {localize("my-word-key")}
         </span>
-    </PageContainer>;
+    </Container>;
 };
 
 const App = () => {
@@ -195,7 +195,7 @@ export default App;
 ```tsx
 import {
     NCoreProvider,
-    PageContainer
+    Container
 } from "ncore-web";
 
 const App = () => {
