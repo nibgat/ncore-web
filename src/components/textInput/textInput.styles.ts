@@ -40,5 +40,7 @@ const useStyles = createUseStyles({
         alignSelf: "center",
         display: "flex"
     }
+}, {
+    name: "NCore-TextInput"
 });
 export default useStyles;
