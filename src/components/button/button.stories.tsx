@@ -43,43 +43,50 @@ export default {
 
 const Template: Story<IButtonProps> = (args) => <Button {...args} />;
 
-export const Filled = Template.bind({});
-Filled.args = {
+export const Default = Template.bind({
+});
+Default.args = {
     variant: "filled",
     title: "Button"
 };
 
-export const Outline = Template.bind({});
+export const Outline = Template.bind({
+});
 Outline.args = {
     variant: "outline",
     title: "Button"
 };
 
-export const Ghost = Template.bind({});
+export const Ghost = Template.bind({
+});
 Ghost.args = {
     variant: "ghost",
     title: "Button"
 };
 
-export const Large = Template.bind({});
+export const Large = Template.bind({
+});
 Large.args = {
     size: "large",
     title: "Button"
 };
 
-export const Medium = Template.bind({});
+export const Medium = Template.bind({
+});
 Medium.args = {
     size: "medium",
     title: "Button"
 };
 
-export const Small = Template.bind({});
+export const Small = Template.bind({
+});
 Small.args = {
     size: "small",
     title: "Button"
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({
+});
 Disabled.args = {
     variant: "filled",
     disabled: true,

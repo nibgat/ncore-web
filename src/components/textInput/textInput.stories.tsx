@@ -37,14 +37,15 @@ export default {
 
 const Template: Story<ITextInputProps> = (args) => <TextInput {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Default = Template.bind({
+});
+Default.args = {
     title: "Text Input",
-    placeholder: "Please enter text",
-    clearEnabled: true
+    placeholder: "Please enter text"
 };
 
-export const Multiline = Template.bind({});
+export const Multiline = Template.bind({
+});
 Multiline.args = {
     title: "Text Input",
     placeholder: "Please enter text",
@@ -52,7 +53,8 @@ Multiline.args = {
     multiline: true
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({
+});
 Disabled.args = {
     title: "Text Input",
     placeholder: "Please enter text",

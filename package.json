@@ -90,6 +90,7 @@
         "react-jss": ">=10.9.0"
     },
     "dependencies": {
+        "@storybook/addon-docs": "^6.5.9",
         "react-jss": "^10.9.0"
     }
 }

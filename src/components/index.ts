@@ -9,3 +9,7 @@ export {
 export {
     default as TextInput
 } from "./textInput/textInput";
+
+export {
+    default as Container
+} from "./container/container";
