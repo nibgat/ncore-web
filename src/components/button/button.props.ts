@@ -36,17 +36,20 @@ export type ButtonStylerParams = {
     iconColor?: keyof NCore.Colors;
     borders: NCore.BordersTokens;
     disabledStyle: CSSProperties;
+    spaces: NCore.SpacesTokens;
     color: keyof NCore.Colors;
     variant: ButtonVariant;
     colors: NCore.Colors;
     disabled: boolean;
     loading?: boolean;
+    icon?: NCoreIcon;
     size: ButtonSize;
 };
 
 export type TitleProps = {
     color: keyof NCore.Colors;
     variant: keyof NCore.Typography;
+    style?: CSSProperties;
 };
 
 export type ButtonStylerResult = {
