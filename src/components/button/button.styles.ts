@@ -8,9 +8,12 @@ import {
 const useStyles = createUseStyles({
     container: {
         transition: "transform 0.1s",
+        alignItems: "center",
         borderStyle: "solid",
+        flexDirection: "row",
         userSelect: "none",
         outline: "none",
+        display: "flex",
         "&:hover": {
             transition: "transform 0.1s",
             cursor: "pointer",

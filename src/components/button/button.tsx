@@ -26,8 +26,10 @@ const buttonStyler = ({
     disabledStyle,
     color,
     variant,
+    spaces,
     colors,
     disabled,
+    icon,
     loading,
     size
 }: ButtonStylerParams): ButtonStylerResult => {
@@ -50,6 +52,15 @@ const buttonStyler = ({
         if(displayBehaviourWhileLoading === "disabled") {
             container.opacity = 0.5;
         }
+    }
+
+    if(icon) {
+        titleProps = {
+            ...titleProps,
+            style: {
+                marginLeft: spaces.content
+            }
+        };
     }
 
     if(!textColor) {
@@ -125,6 +136,7 @@ const Button: FC<IButtonProps> = ({
         titleProps
     } = buttonStyler({
         displayBehaviourWhileLoading,
+        icon: IconComponentProp,
         spreadBehaviour,
         radiuses,
         textColor,
@@ -132,6 +144,7 @@ const Button: FC<IButtonProps> = ({
         borders,
         disabledStyle,
         color,
+        spaces,
         variant,
         colors,
         disabled,
@@ -171,6 +184,7 @@ const Button: FC<IButtonProps> = ({
             style={{
                 ...titleStyle,
                 ...textStyle,
+                ...titleProps.style
             }}
         >
             {title}
