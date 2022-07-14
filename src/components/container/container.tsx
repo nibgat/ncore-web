@@ -9,6 +9,9 @@ import useStyles from "./container.style";
 
 const Container: FC<IContainerProps> = ({
     contentContainerClassName,
+    contentContainerStyle,
+    contentClassName,
+    contentStyle,
     className,
     children,
     style,
@@ -38,10 +41,21 @@ const Container: FC<IContainerProps> = ({
                 contentContainerClassName
             ].join(" ")}
             style={{
+                ...contentContainerStyle,
                 padding: spaces.container
             }}
         >
-            {children}
+            <div
+                className={[
+                    classes.content,
+                    contentClassName
+                ].join(" ")}
+                style={{
+                    ...contentStyle
+                }}
+            >
+                {children}
+            </div>
         </div>
     </div>;
 };
