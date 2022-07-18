@@ -12,7 +12,8 @@ const useStyles = createUseStyles({
         display: "flex",
         height: 10,
         "&:hover": {
-            cursor: "pointer"
+            cursor: "pointer",
+            opacity: 0.75
         }
     },
     indicator: {

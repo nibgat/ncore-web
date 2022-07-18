@@ -14,7 +14,9 @@ const INDICATOR_WIDTH = 20;
 
 const switcherStyler = ({
     indicatorStyle,
+    disabledStyle,
     isActive,
+    disabled,
     colors,
     spaces,
     style
@@ -42,6 +44,14 @@ const switcherStyler = ({
         container.backgroundColor = colors.primary;
     }
 
+    if(disabled) {
+        container = {
+            ...container,
+            ...disabledStyle,
+            cursor: "no-drop",
+        };
+    }
+
     return {
         indicator,
         container
@@ -51,11 +61,13 @@ const switcherStyler = ({
 const Switcher: FC<ISwitcherProps> = ({
     indicatorStyle,
     className,
+    disabled,
     isActive,
     onChange,
     style
 }) => {
     const {
+        disabled: disabledStyle,
         colors,
         spaces
     } = useNCoreTheme();
@@ -67,6 +79,8 @@ const Switcher: FC<ISwitcherProps> = ({
         container
     } = switcherStyler({
         indicatorStyle,
+        disabledStyle,
+        disabled,
         isActive,
         colors,
         spaces,
@@ -75,7 +89,7 @@ const Switcher: FC<ISwitcherProps> = ({
 
     return <div
         onClick={() => {
-            if(onChange) onChange();
+            if(onChange && !disabled) onChange();
         }}
         className={[
             classes.container,
