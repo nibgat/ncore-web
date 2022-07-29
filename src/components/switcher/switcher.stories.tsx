@@ -18,6 +18,9 @@ export default {
     argTypes: {
         isActive: {
             control: "boolean"
+        },
+        disabled: {
+            control: "boolean"
         }
     }
 } as Meta;
