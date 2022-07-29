@@ -11,5 +11,6 @@ interface IContainerProps {
     style?: CSSProperties;
     children?: ReactNode;
     className?: string;
+    id?: string;
 };
 export default IContainerProps;
