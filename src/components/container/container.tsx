@@ -31,8 +31,8 @@ const Container: FC<IContainerProps> = ({
             className
         ].join(" ")}
         style={{
-            ...style,
-            backgroundColor: colors.layer1
+            backgroundColor: colors.layer1,
+            ...style
         }}
     >
         <div
@@ -41,8 +41,8 @@ const Container: FC<IContainerProps> = ({
                 contentContainerClassName
             ].join(" ")}
             style={{
-                ...contentContainerStyle,
-                padding: spaces.container
+                padding: spaces.container,
+                ...contentContainerStyle
             }}
         >
             <div
