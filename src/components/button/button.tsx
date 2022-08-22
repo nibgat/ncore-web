@@ -72,9 +72,21 @@ const buttonStyler = ({
         titleProps.color = titleColor;
     }
 
-    if(spreadBehaviour === "baseline" || spreadBehaviour === "stretch") {
+    if(spreadBehaviour === "baseline") {
         container.alignSelf = spreadBehaviour;
-        container.width = spreadBehaviour === "stretch" ? "100%" : "auto";
+        container.width = "auto";
+    }
+
+    if(spreadBehaviour === "stretch") {
+        container.alignSelf = spreadBehaviour;
+        container.width = "100%";
+        titleProps = {
+            ...titleProps,
+            style: {
+                ...titleProps.style,
+                width: "100%"
+            }
+        };
     }
 
     if(disabled) {
