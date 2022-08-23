@@ -1,6 +1,6 @@
 {
     "name": "ncore-web",
-    "version": "0.3.1-alpha.3",
+    "version": "0.3.2-alpha.0",
     "description": "NİBGAT® | Ncore - Web Component Library",
     "main": "lib/index.js",
     "module": "lib/index.js",
