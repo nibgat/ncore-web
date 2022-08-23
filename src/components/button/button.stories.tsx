@@ -36,6 +36,9 @@ export default {
                 type: "select",
                 options: ["free", "baseline", "stretch"]
             }
+        },
+        loading: {
+            control: true
         }
     },
 } as Meta;
@@ -89,5 +92,12 @@ export const Disabled = Template.bind({
 Disabled.args = {
     variant: "filled",
     disabled: true,
+    title: "Button"
+};
+
+export const Loading = Template.bind({
+});
+Loading.args = {
+    loading: true,
     title: "Button"
 };

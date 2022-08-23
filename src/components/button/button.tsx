@@ -15,6 +15,7 @@ import useStyles, {
     SIZE_TO_STYLE_MAPPING
 } from './button.styles';
 import Text from "../text/text";
+import Loading from '../loading/loading';
 
 const buttonStyler = ({
     displayBehaviourWhileLoading,
@@ -166,7 +167,9 @@ const Button: FC<IButtonProps> = ({
 
     const renderIcon = () => {
         if(loading) {
-            return null;
+            return <Loading
+                color={titleProps.color}
+            />;
         }
 
         if(!IconComponentProp) {
