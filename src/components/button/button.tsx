@@ -80,14 +80,8 @@ const buttonStyler = ({
 
     if(spreadBehaviour === "stretch") {
         container.alignSelf = spreadBehaviour;
+        container.justifyContent = "center";
         container.width = "100%";
-        titleProps = {
-            ...titleProps,
-            style: {
-                ...titleProps.style,
-                width: "100%"
-            }
-        };
     }
 
     if(disabled) {
