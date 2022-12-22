@@ -17,3 +17,7 @@ export {
 export {
     default as Switcher
 } from "./switcher/switcher";
+
+export {
+    default as Loading
+} from "./loading/loading";

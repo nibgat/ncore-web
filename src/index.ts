@@ -11,6 +11,7 @@ export {
     Container,
     TextInput,
     Switcher,
+    Loading,
     Button,
     Text
 } from "./components";
