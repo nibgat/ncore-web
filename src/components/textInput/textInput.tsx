@@ -101,6 +101,7 @@ const TextInput: FC<ITextInputProps> = ({
     placeholder,
     inputClass,
     className,
+    password,
     style,
     title,
     id,
@@ -221,7 +222,7 @@ const TextInput: FC<ITextInputProps> = ({
         return <input
             {...props}
             ref={inputRef}
-            type="text"
+            type={password ? "password" : "text"}
             value={value}
             disabled={disabled}
             onFocus={onFocus}

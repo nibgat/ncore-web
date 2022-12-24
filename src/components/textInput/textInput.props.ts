@@ -16,6 +16,7 @@ interface ITextInputProps {
     inputClass?: string;
     disabled?: boolean;
     className?: string;
+    password?: boolean;
     title: string;
     id: string;
 };
