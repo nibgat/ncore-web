@@ -46,7 +46,7 @@ const buttonStyler = ({
 
     let titleProps: TitleProps = {
         color: titleColor,
-        variant: SIZE_TO_STYLE_MAPPING[size].title.size
+        variant: SIZE_TO_STYLE_MAPPING[size].title.size,
     };
 
     if(loading) {
@@ -59,7 +59,8 @@ const buttonStyler = ({
         titleProps = {
             ...titleProps,
             style: {
-                marginLeft: spaces.content
+                marginLeft: spaces.content,
+                margin: "0 auto"
             }
         };
     }
