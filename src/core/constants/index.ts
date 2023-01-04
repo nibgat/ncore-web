@@ -8,11 +8,6 @@ export type {
     LocalesStore 
 } from "./locales";
 
-export type {
-    DialogVariant,
-    IDialogProps
-} from "./dialog";
-
 export {
     default as ThemeStoreInitial,
 } from "./theme";

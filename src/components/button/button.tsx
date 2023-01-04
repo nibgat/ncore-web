@@ -54,8 +54,24 @@ const buttonStyler = ({
 
     if(loading) {
         if(displayBehaviourWhileLoading === "disabled") {
-            container.opacity = 0.5;
+            container = {
+                ...container,
+                ...disabledStyle,
+                cursor: "no-drop",
+                transform: "none",
+                opacity: 0.5
+            };
         }
+    }
+
+    if(loading && spreadBehaviour === "stretch") {
+        titleProps = {
+            ...titleProps,
+            style: {
+                ...titleProps.style,
+                margin: "inherit"
+            }
+        };
     }
 
     if(icon) {
