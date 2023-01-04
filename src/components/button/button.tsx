@@ -61,6 +61,13 @@ const buttonStyler = ({
                 transform: "none",
                 opacity: 0.5
             };
+            titleProps = {
+                ...titleProps,
+                style: {
+                    ...titleProps.style,
+                    marginLeft: spaces.content
+                }
+            };
         }
     }
 
@@ -69,7 +76,8 @@ const buttonStyler = ({
             ...titleProps,
             style: {
                 ...titleProps.style,
-                margin: "inherit"
+                margin: "initial",
+                marginLeft: spaces.content
             }
         };
     }

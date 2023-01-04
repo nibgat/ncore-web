@@ -49,6 +49,7 @@ export const Default = Template.bind({
 Default.args = {
     title: "Alert!",
     content: "Hello world!.",
+    isVisible: true,
     onOverlayPress: () => {
         alert("Overlay pressed.");
     },
