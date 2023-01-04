@@ -21,3 +21,7 @@ export {
 export {
     default as Loading
 } from "./loading/loading";
+
+export {
+    default as Dialog
+} from "./dialog/dialog";

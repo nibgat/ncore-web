@@ -38,7 +38,7 @@ export default {
             }
         },
         loading: {
-            control: true
+            control: "boolean"
         }
     },
 } as Meta;
