@@ -5,3 +5,7 @@ export {
 export {
     default as LoadingIcon
 } from "./loading";
+
+export {
+    default as ChevronRightIcon
+} from "./chrevronRight";
