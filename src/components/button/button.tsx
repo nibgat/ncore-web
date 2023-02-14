@@ -65,7 +65,7 @@ const buttonStyler = ({
                 ...titleProps,
                 style: {
                     ...titleProps.style,
-                    marginLeft: spaces.content
+                    marginLeft: spaces.content * 2
                 }
             };
         }

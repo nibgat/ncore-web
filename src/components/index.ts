@@ -25,3 +25,11 @@ export {
 export {
     default as Dialog
 } from "./dialog/dialog";
+
+export {
+    default as Row
+} from "./row/row";
+
+export {
+    default as Chip
+} from "./chip/chip";

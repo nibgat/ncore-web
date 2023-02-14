@@ -191,7 +191,7 @@ const TextInput: FC<ITextInputProps> = ({
         >
             <ClearIcon
                 color={colors.hideBody}
-                size={1.25}
+                size={24}
             />
         </div>;
     };
