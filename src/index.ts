@@ -14,6 +14,7 @@ export {
     Loading,
     Button,
     Dialog,
+    Chip,
     Text,
     Row
 } from "./components";

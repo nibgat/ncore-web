@@ -29,3 +29,7 @@ export {
 export {
     default as Row
 } from "./row/row";
+
+export {
+    default as Chip
+} from "./chip/chip";

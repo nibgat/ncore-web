@@ -9,6 +9,8 @@ const SvgLoadingIcon = ({
 }: INCoreIconProps & {
     className?: string;
 }) => {
+    const pathScale = 22 / size;
+
     return <span
         style={{
             height: size,
@@ -28,9 +30,7 @@ const SvgLoadingIcon = ({
                 stroke={color}
                 strokeOpacity={0.922}
                 strokeWidth={3}
-                style={{
-                    transform: `scale(${size / 23})`
-                }}
+                transform={`scale(${1 / pathScale})`}
             />
         </svg>
     </span>;
