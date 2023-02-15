@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
     contentContainer: {
         position: "absolute",
         overflow: "hidden",
-        maxHeight: "100%",
+        maxHeight: "80%",
         maxWidth: "85%",
         zIndex: 99999
     },
