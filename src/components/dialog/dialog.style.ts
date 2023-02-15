@@ -28,14 +28,17 @@ const useStyles = createUseStyles({
         top: 0
     },
     contentContainer: {
+        flexDirection: "column",
         position: "absolute",
         overflow: "hidden",
         maxHeight: "80%",
+        display: "flex",
         maxWidth: "85%",
         zIndex: 99999
     },
     content: {
         userSelect: "none",
+        overflowY: "auto",
         flexWrap: "wrap"
     },
     headerContainer: {
