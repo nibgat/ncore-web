@@ -27,6 +27,9 @@ const useStyles = createUseStyles({
             // transform: (props: { disabled: boolean; }) => props.disabled ? "none" : "translateY(1px)",
             transition: "transform 0.1s"
         }
+    },
+    title: {
+        whiteSpace: "nowrap"
     }
 }, {
     name: "NCore-Chip"
