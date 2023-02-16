@@ -8,6 +8,9 @@ const useStyles = createUseStyles({
         flexDirection: "row",
         alignItems: "center",
         display: "flex"
+    },
+    leftContainer: {
+        width: "100%"
     }
 }, {
     name: "NCore-Row"

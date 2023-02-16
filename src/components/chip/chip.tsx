@@ -192,6 +192,7 @@ const Chip: FC<IChipProps> = ({
 
         return <Text
             variant={titleProps.variant}
+            className={classes.title}
             color={titleProps.color}
             style={{
                 ...textStyle,

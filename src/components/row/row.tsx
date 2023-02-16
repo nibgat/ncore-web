@@ -31,20 +31,20 @@ const rowStyler = ({
     let _redirectIconProps = {
         color: colors.body,
         size: 30
-    }
+    };
 
     if(redirectIconProps) {
         _redirectIconProps = {
             ..._redirectIconProps,
             ...redirectIconProps
-        }
+        };
     }
 
     if(disabled) {
         container = {
             ...container,
             ...disabledStyle
-        }
+        };
     }
 
     return {
@@ -94,7 +94,7 @@ const Row: FC<IRowProps> = ({
         >
             {title}
         </Text>;
-    }
+    };
 
     const renderRight = () => {
         if(rightComponent) {
@@ -102,7 +102,7 @@ const Row: FC<IRowProps> = ({
         }
 
         return null;
-    }
+    };
 
     const renderRedirect = () => {
         if(!isRedirect) {
@@ -133,7 +133,9 @@ const Row: FC<IRowProps> = ({
         }}
         onClick={_onClick}
     >
-        <div>
+        <div
+            className={classes.leftContainer}
+        >
             {renderLeft()}
         </div>
         <div>
@@ -141,5 +143,5 @@ const Row: FC<IRowProps> = ({
         </div>
         {renderRedirect()}
     </div>;
-}
+};
 export default Row;
