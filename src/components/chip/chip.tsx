@@ -22,6 +22,7 @@ import {
 } from "../../assets/svgr";
 
 const buttonStyler = ({
+    spreadBehaviour,
     disabledStyle,
     isCancelable,
     titleColor,
@@ -70,6 +71,15 @@ const buttonStyler = ({
         cancelIconProps.color = colors[color];
         titleProps.color = color;
         iconProps.color = color;
+    }
+
+    if(spreadBehaviour === "baseline") {
+        container.alignSelf = spreadBehaviour;
+        container.width = "auto";
+    }
+
+    if(spreadBehaviour === "center") {
+        container.alignSelf = spreadBehaviour;
     }
 
     if(icon) {
@@ -125,6 +135,7 @@ const buttonStyler = ({
  * @returns Element
  */
 const Chip: FC<IChipProps> = ({
+    spreadBehaviour = "free",
     icon: IconComponentProp,
     variant = "filled",
     color = "primary",
@@ -155,6 +166,7 @@ const Chip: FC<IChipProps> = ({
         titleProps
     } = buttonStyler({
         icon: IconComponentProp,
+        spreadBehaviour,
         disabledStyle,
         isCancelable,
         titleColor,

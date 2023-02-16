@@ -49,6 +49,16 @@ export default {
                 "medium",
                 "large"
             ]
+        },
+        spreadBehaviour: {
+            control: {
+                type: "select",
+                options: [
+                    "baseline",
+                    "center",
+                    "free"
+                ]
+            }
         }
     },
 } as Meta;

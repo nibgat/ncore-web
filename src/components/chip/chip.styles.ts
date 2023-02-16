@@ -12,7 +12,6 @@ const useStyles = createUseStyles({
         flexDirection: "row",
         borderStyle: "solid",
         alignItems: "center",
-        alignSelf: "center",
         userSelect: "none",
         outline: "none",
         display: "flex",

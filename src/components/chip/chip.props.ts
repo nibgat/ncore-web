@@ -7,6 +7,7 @@ import {
 } from "src/core/types";
 
 interface IChipProps {
+    spreadBehaviour?: ChipSpreadBehaviour;
     titleColor?: keyof NCore.Colors;
     iconColor?: keyof NCore.Colors;
     color?: keyof NCore.Colors;
@@ -21,7 +22,10 @@ interface IChipProps {
     title: string;
 };
 
+export type ChipSpreadBehaviour = "baseline" | "center" | "free";
+
 export type ChipStylerParams = {
+    spreadBehaviour: ChipSpreadBehaviour;
     titleColor?: keyof NCore.Colors;
     iconColor?: keyof NCore.Colors;
     borders: NCore.BordersTokens;
