@@ -62,6 +62,7 @@ const Row: FC<IRowProps> = ({
     isRedirect,
     disabled,
     onClick,
+    style,
     title
 }) => {
     const classes = useStyles();
@@ -129,6 +130,7 @@ const Row: FC<IRowProps> = ({
     return <div
         className={classes.container}
         style={{
+            ...style,
             ...container
         }}
         onClick={_onClick}

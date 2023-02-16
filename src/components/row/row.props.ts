@@ -12,6 +12,7 @@ interface IRowProps extends Partial<Omit<HTMLButtonElement, "children" | "style"
     rightComponent?: ReactNode;
     color?: keyof NCore.Colors;
     leftComponent?: ReactNode;
+    style?: CSSProperties;
     onClick?: () => void;
     isRedirect?: boolean;
     disabled?: boolean;
