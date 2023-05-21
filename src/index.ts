@@ -21,5 +21,9 @@ export {
 } from "./components";
 
 export {
+    Portal
+} from "./packages/react-portalize/src/Portal";
+
+export {
     default as NCoreProvider 
 } from "./core";

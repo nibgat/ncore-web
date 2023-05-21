@@ -4,6 +4,12 @@ import {
 import {
     createUseStyles
 } from "react-jss";
+import {
+    INCoreIconProps 
+} from "src/core/types";
+import {
+    ButtonStylerParams, ButtonStylerResult, TitleProps 
+} from "./button.props";
 
 const useStyles = createUseStyles({
     container: {
@@ -47,6 +53,123 @@ export type ButtonStyleMappingType = {
     small: ButtonStyle;
     medium: ButtonStyle;
     large: ButtonStyle;
+};
+
+export const buttonStyler = ({
+    displayBehaviourWhileLoading,
+    spreadBehaviour,
+    disabledStyle,
+    textColor,
+    iconColor,
+    disabled,
+    radiuses,
+    borders,
+    loading,
+    variant,
+    spaces,
+    colors,
+    color,
+    icon,
+    size
+}: ButtonStylerParams): ButtonStylerResult => {
+    let container: CSSProperties = {
+        backgroundColor: variant === "filled" ? colors[color] : "transparent",
+        borderColor: variant !== "ghost" ? colors[color] : "transparent",
+        ...SIZE_TO_STYLE_MAPPING[size].container,
+        borderWidth: borders.indicator,
+        borderRadius: radiuses.half
+    };
+
+    let titleColor: keyof NCore.Colors = textColor ? textColor : "body";
+
+    let titleProps: TitleProps = {
+        color: titleColor,
+        variant: SIZE_TO_STYLE_MAPPING[size].title.size,
+        style: {
+            margin: "0 auto"
+        }
+    };
+
+    if(loading) {
+        if(displayBehaviourWhileLoading === "disabled") {
+            container = {
+                ...container,
+                ...disabledStyle,
+                cursor: "no-drop",
+                transform: "none",
+                opacity: 0.5
+            };
+            titleProps = {
+                ...titleProps,
+                style: {
+                    ...titleProps.style,
+                    marginLeft: spaces.content * 2
+                }
+            };
+        }
+    }
+
+    if(loading && spreadBehaviour === "stretch") {
+        titleProps = {
+            ...titleProps,
+            style: {
+                ...titleProps.style,
+                margin: "initial",
+                marginLeft: spaces.content
+            }
+        };
+    }
+
+    if(icon && !loading) {
+        titleProps = {
+            ...titleProps,
+            style: {
+                ...titleProps.style,
+                margin: "initial",
+                marginLeft: spaces.content
+            }
+        };
+    }
+
+    if(!textColor) {
+        if(variant !== "filled") {
+            titleColor = color;
+        } else {
+            titleColor = "constrastBody";
+        }
+        titleProps.color = titleColor;
+    }
+
+    if(spreadBehaviour === "baseline") {
+        container.alignSelf = spreadBehaviour;
+        container.width = "auto";
+    }
+
+    if(spreadBehaviour === "stretch") {
+        container.alignSelf = spreadBehaviour;
+        container.justifyContent = "center";
+        container.width = "100%";
+    }
+
+    if(disabled) {
+        container = {
+            ...container,
+            ...disabledStyle,
+            cursor: "no-drop",
+            transform: "none"
+        };
+    }
+
+    let iconProps: INCoreIconProps = {
+        size: SIZE_TO_STYLE_MAPPING[size].icon.size,
+        color: iconColor ? colors[iconColor] : colors[titleColor]
+    };
+
+    return {
+        titleProps,
+        iconProps,
+        container
+    };
 };
 
 export const SIZE_TO_STYLE_MAPPING: ButtonStyleMappingType = {

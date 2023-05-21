@@ -1,6 +1,62 @@
 import {
+    CSSProperties
+} from "react";
+import {
     createUseStyles
 } from "react-jss";
+import {
+    DialogStylerParams,
+    DialogStylerResult 
+} from "./dialog.props";
+
+export const dialogStyler = ({
+    contentContainerStyle,
+    bottomContainerStyle,
+    headerContainerStyle,
+    radiuses,
+    spaces,
+    colors
+}: DialogStylerParams): DialogStylerResult => {
+    let container: CSSProperties = {
+        backgroundColor: colors.layer1,
+        borderRadius: radiuses.half,
+        padding: spaces.container
+    };
+
+    let header: CSSProperties = {
+        paddingRight: spaces.content / 2,
+        paddingLeft: spaces.content / 2,
+        paddingTop: spaces.content,
+        ...headerContainerStyle
+    };
+
+    let content: CSSProperties = {
+        paddingRight: spaces.content / 2,
+        paddingLeft: spaces.content / 2,
+        paddingBottom: spaces.content,
+        paddingTop: spaces.content,
+        ...contentContainerStyle
+    };
+
+    let bottom: CSSProperties = {
+        paddingRight: spaces.content / 2,
+        paddingLeft: spaces.content / 2,
+        paddingTop: spaces.content,
+        ...bottomContainerStyle
+    };
+
+    let primaryButton: CSSProperties = {
+        marginLeft: spaces.content
+    };
+
+    return {
+        primaryButton,
+        container,
+        content,
+        bottom,
+        header
+    };
+};
 
 const useStyles = createUseStyles({
     container: {

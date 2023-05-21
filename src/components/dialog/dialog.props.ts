@@ -1,4 +1,5 @@
 import {
+    CSSProperties,
     ReactNode
 } from "react";
 import {
@@ -7,11 +8,11 @@ import {
 import {
     PortalizedComponentProps 
 } from "../../core/types";
-import {
-    CSSProperties 
-} from "styled-components";
 
 export type DialogStylerParams = {
+    contentContainerStyle?: CSSProperties;
+    bottomContainerStyle?: CSSProperties;
+    headerContainerStyle?: CSSProperties;
     radiuses: NCore.RadiusesTokens;
     spaces: NCore.SpacesTokens;
     colors: NCore.Colors;
@@ -28,21 +29,24 @@ export type DialogStylerResult = {
 export type DialogVariant = "yes-no" | "ok" | "info";
 
 type DialogButton = {
-    title?: string;
-    onClick?: () => void;
     displayBehaviourWhileLoading?: ButtonDisplayBehaviourWhileLoading;
+    onClick?: () => void;
     loading?: boolean;
+    title?: string;
 };
 
 interface IDialogProps extends PortalizedComponentProps {
-    variant?: DialogVariant;
-    title?: string;
-    content?: string;
-    onOverlayPress?: () => void;
-    primaryButtonProps?: DialogButton;
+    contentContainerStyle?: CSSProperties;
+    bottomContainerStyle?: CSSProperties;
+    headerContainerStyle?: CSSProperties;
     secondaryButtonProps?: DialogButton;
+    primaryButtonProps?: DialogButton;
+    onOverlayPress?: () => void;
     headerComponent?: ReactNode;
     bottomComponent?: ReactNode;
+    variant?: DialogVariant;
     children?: ReactNode;
+    content?: string;
+    title?: string;
 };
 export default IDialogProps;

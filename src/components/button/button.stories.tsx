@@ -4,6 +4,13 @@ import {
 } from "@storybook/react";
 import Button from "./button";
 import IButtonProps from "./button.props";
+import {
+    ChevronRightIcon,
+    ClearIcon
+} from "../../assets/svgr";
+import {
+    INCoreIconProps 
+} from "src/core/types";
 
 export default {
     title: "Components/Button",
@@ -39,6 +46,29 @@ export default {
         },
         loading: {
             control: "boolean"
+        },
+        icon: {
+            mapping: {
+                "undefined": undefined,
+                "chevronRightIcon": ({
+                    color,
+                    size
+                }: INCoreIconProps) => <ChevronRightIcon
+                    color={color}
+                    size={size}
+                />,
+                "clearIcon": ({
+                    color,
+                    size
+                }: INCoreIconProps) => <ClearIcon
+                    color={color}
+                    size={size}
+                />
+            },
+            control: {
+                type: "select",
+                options: ["undefined", "chevronRightIcon", "clearIcon"]
+            }
         }
     },
 } as Meta;
@@ -100,4 +130,17 @@ export const Loading = Template.bind({
 Loading.args = {
     loading: true,
     title: "Button"
+};
+
+export const Icon = Template.bind({
+});
+Icon.args = {
+    title: "Button",
+    icon: ({
+        color,
+        size
+    }) => <ChevronRightIcon
+        color={color}
+        size={size}
+    />
 };

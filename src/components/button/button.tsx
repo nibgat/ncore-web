@@ -2,136 +2,15 @@ import {
     CSSProperties,
     FC
 } from 'react';
-import IButtonProps, {
-    ButtonStylerParams,
-    ButtonStylerResult,
-    TitleProps
-} from './button.props';
+import IButtonProps from './button.props';
 import {
-    INCoreIconProps,
     useNCoreTheme
 } from "../../";
 import useStyles, {
-    SIZE_TO_STYLE_MAPPING
+    buttonStyler 
 } from './button.styles';
 import Text from "../text/text";
 import Loading from '../loading/loading';
-
-const buttonStyler = ({
-    displayBehaviourWhileLoading,
-    spreadBehaviour,
-    radiuses,
-    textColor,
-    iconColor,
-    borders,
-    disabledStyle,
-    color,
-    variant,
-    spaces,
-    colors,
-    disabled,
-    icon,
-    loading,
-    size
-}: ButtonStylerParams): ButtonStylerResult => {
-    let container: CSSProperties = {
-        backgroundColor: variant === "filled" ? colors[color] : "transparent",
-        borderColor: variant !== "ghost" ? colors[color] : "transparent",
-        ...SIZE_TO_STYLE_MAPPING[size].container,
-        borderWidth: borders.indicator,
-        borderRadius: radiuses.half
-    };
-
-    let titleColor: keyof NCore.Colors = textColor ? textColor : "body";
-
-    let titleProps: TitleProps = {
-        color: titleColor,
-        variant: SIZE_TO_STYLE_MAPPING[size].title.size,
-        style: {
-            margin: "0 auto"
-        }
-    };
-
-    if(loading) {
-        if(displayBehaviourWhileLoading === "disabled") {
-            container = {
-                ...container,
-                ...disabledStyle,
-                cursor: "no-drop",
-                transform: "none",
-                opacity: 0.5
-            };
-            titleProps = {
-                ...titleProps,
-                style: {
-                    ...titleProps.style,
-                    marginLeft: spaces.content * 2
-                }
-            };
-        }
-    }
-
-    if(loading && spreadBehaviour === "stretch") {
-        titleProps = {
-            ...titleProps,
-            style: {
-                ...titleProps.style,
-                margin: "initial",
-                marginLeft: spaces.content
-            }
-        };
-    }
-
-    if(icon) {
-        titleProps = {
-            ...titleProps,
-            style: {
-                ...titleProps.style,
-                marginLeft: spaces.content
-            }
-        };
-    }
-
-    if(!textColor) {
-        if(variant !== "filled") {
-            titleColor = color;
-        } else {
-            titleColor = "constrastBody";
-        }
-        titleProps.color = titleColor;
-    }
-
-    if(spreadBehaviour === "baseline") {
-        container.alignSelf = spreadBehaviour;
-        container.width = "auto";
-    }
-
-    if(spreadBehaviour === "stretch") {
-        container.alignSelf = spreadBehaviour;
-        container.justifyContent = "center";
-        container.width = "100%";
-    }
-
-    if(disabled) {
-        container = {
-            ...container,
-            ...disabledStyle,
-            cursor: "no-drop",
-            transform: "none"
-        };
-    }
-
-    let iconProps: INCoreIconProps = {
-        size: SIZE_TO_STYLE_MAPPING[size].icon.size,
-        color: iconColor ? colors[iconColor] : colors[titleColor]
-    };
-
-    return {
-        titleProps,
-        iconProps,
-        container
-    };
-};
 
 /**
  * A generic button
@@ -166,24 +45,24 @@ const Button: FC<IButtonProps> = ({
     } = useNCoreTheme();
 
     const {
+        titleProps,
         container,
-        iconProps,
-        titleProps
+        iconProps
     } = buttonStyler({
         displayBehaviourWhileLoading,
         icon: IconComponentProp,
         spreadBehaviour,
-        radiuses,
+        disabledStyle,
         textColor,
         iconColor,
+        radiuses,
+        disabled,
         borders,
-        disabledStyle,
-        color,
-        spaces,
+        loading,
         variant,
         colors,
-        disabled,
-        loading,
+        spaces,
+        color,
         size
     });
 
@@ -210,10 +89,6 @@ const Button: FC<IButtonProps> = ({
 
         let textStyle: CSSProperties = {
         };
-
-        if(IconComponentProp || loading) {
-            textStyle.marginLeft = spaces.content;
-        }
 
         return <Text
             variant={titleProps.variant}
