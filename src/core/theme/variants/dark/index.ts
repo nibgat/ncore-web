@@ -104,21 +104,21 @@ export const typography: Required<NCore.Typography> = {
         fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: 0.5,
-        lineHeight: 1.42,
+        lineHeight: 1.40,
         fontSize: 12
     },
     buttonMedium: {
         fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: 0.5,
-        lineHeight: 1.42,
+        lineHeight: 1.40,
         fontSize: 14
     },
     buttonLarge: {
         fontFamily: "Montserrat-SemiBold",
         fontWeight: 600,
         letterSpacing: 0.5,
-        lineHeight: 1.42,
+        lineHeight: 1.40,
         fontSize: 16
     },
     overline: {

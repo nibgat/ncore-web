@@ -1,66 +1,24 @@
 import {
-    CSSProperties,
     FC
 } from "react";
-import useStyles from "./dialog.style";
+import useStyles, {
+    dialogStyler 
+} from "./dialog.style";
 import {
     useNCoreLocalization,
     useNCoreTheme
 } from "../../core/context";
-import IDialogProps, {
-    DialogStylerResult,
-    DialogStylerParams
-} from "./dialog.props";
+import IDialogProps from "./dialog.props";
 import Button from "../button/button";
 import Text from "../text/text";
 import {
     Portal
 } from "../../packages/react-portalize/src/index";
 
-const dialogStyler = ({
-    radiuses,
-    spaces,
-    colors
-}: DialogStylerParams): DialogStylerResult => {
-    let container: CSSProperties = {
-        backgroundColor: colors.layer1,
-        borderRadius: radiuses.half,
-        padding: spaces.container
-    };
-
-    let header: CSSProperties = {
-        paddingRight: spaces.content / 2,
-        paddingLeft: spaces.content / 2,
-        paddingTop: spaces.content
-    };
-
-    let content: CSSProperties = {
-        paddingRight: spaces.content / 2,
-        paddingLeft: spaces.content / 2,
-        paddingBottom: spaces.content,
-        paddingTop: spaces.content
-    };
-
-    let bottom: CSSProperties = {
-        paddingRight: spaces.content / 2,
-        paddingLeft: spaces.content / 2,
-        paddingTop: spaces.content
-    };
-
-    let primaryButton: CSSProperties = {
-        marginLeft: spaces.content
-    };
-
-    return {
-        primaryButton,
-        container,
-        content,
-        bottom,
-        header
-    };
-};
-
 const Dialog: FC<IDialogProps> = ({
+    contentContainerStyle,
+    bottomContainerStyle,
+    headerContainerStyle,
     secondaryButtonProps,
     primaryButtonProps,
     isVisible = false,
@@ -91,6 +49,9 @@ const Dialog: FC<IDialogProps> = ({
         bottom,
         header
     } = dialogStyler({
+        contentContainerStyle,
+        bottomContainerStyle,
+        headerContainerStyle,
         radiuses,
         spaces,
         colors

@@ -10,14 +10,14 @@ import {
 } from './Manager';
 
 interface IHostProps {
-  children: React.ReactNode;
-  style?: CSSProperties;
+    children: React.ReactNode;
+    style?: CSSProperties;
 }
 
 export interface IProvider {
-  mount(children: React.ReactNode): string;
-  update(key?: string, children?: React.ReactNode): void;
-  unmount(key?: string): void;
+    mount(children: React.ReactNode): string;
+    update(key?: string, children?: React.ReactNode): void;
+    unmount(key?: string): void;
 }
 
 export const Context = React.createContext<IProvider | null>(null);
