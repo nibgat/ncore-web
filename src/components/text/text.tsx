@@ -8,6 +8,7 @@ import ITextProps from "./text.props";
 
 const Text: FC<ITextProps> = ({
     variant = "body",
+    reference,
     children,
     color,
     style,
@@ -20,6 +21,7 @@ const Text: FC<ITextProps> = ({
 
     return <span
         {...props}
+        ref={reference}
         style={{
             ...style,
             ...typography[variant],
