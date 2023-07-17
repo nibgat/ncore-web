@@ -64,6 +64,7 @@ const useStyles = createUseStyles({
         alignItems: "center",
         position: "fixed",
         display: "flex",
+        zIndex: 99996,
         bottom: 0,
         right: 0,
         left: 0,
@@ -71,6 +72,7 @@ const useStyles = createUseStyles({
     },
     overlay: {
         position: "fixed",
+        zIndex: 99997,
         bottom: 0,
         right: 0,
         left: 0,
@@ -78,6 +80,7 @@ const useStyles = createUseStyles({
     },
     overlayTouchableArea: {
         position: "fixed",
+        zIndex: 99998,
         bottom: 0,
         right: 0,
         left: 0,
