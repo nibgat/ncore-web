@@ -62,7 +62,7 @@ const useStyles = createUseStyles({
     container: {
         justifyContent: "center",
         alignItems: "center",
-        position: "absolute",
+        position: "fixed",
         display: "flex",
         bottom: 0,
         right: 0,
@@ -70,14 +70,14 @@ const useStyles = createUseStyles({
         top: 0
     },
     overlay: {
-        position: "absolute",
+        position: "fixed",
         bottom: 0,
         right: 0,
         left: 0,
         top: 0
     },
     overlayTouchableArea: {
-        position: "absolute",
+        position: "fixed",
         bottom: 0,
         right: 0,
         left: 0,
@@ -85,8 +85,8 @@ const useStyles = createUseStyles({
     },
     contentContainer: {
         flexDirection: "column",
-        position: "absolute",
         overflow: "hidden",
+        position: "fixed",
         maxHeight: "80%",
         display: "flex",
         maxWidth: "85%",
