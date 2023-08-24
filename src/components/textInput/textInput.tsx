@@ -92,6 +92,7 @@ const TextInput: FC<ITextInputProps> = ({
     spreadBehaviour = "baseline",
     clearEnabled = false,
     onFocus: onFocusProp,
+    contentType = "text",
     onBlur: onBlurProp,
     isRequired = false,
     multiline = false,
@@ -222,7 +223,7 @@ const TextInput: FC<ITextInputProps> = ({
         return <input
             {...props}
             ref={inputRef}
-            type={password ? "password" : "text"}
+            type={password ? "password" : contentType}
             value={value}
             disabled={disabled}
             onFocus={onFocus}

@@ -4,6 +4,7 @@ import {
 
 interface ITextInputProps {
     spreadBehaviour?: TextInputSpreadBehaviour;
+    contentType?: "email" | "text" | "password";
     onChangeText?: (value: string) => void;
     clearEnabled?: boolean;
     initialValue?: string;
