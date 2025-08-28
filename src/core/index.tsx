@@ -24,7 +24,7 @@ const NCoreProvider: FC<NCoreProvider> = ({
         config={config}
     >
         <header>
-            <link rel="stylesheet" href="https://fonts.nibgat.space/ncore.css"/>
+            <link rel="stylesheet" href="https://fonts.nibgat.com/ncore.css"/>
         </header>
         <span className={classes.hide}></span>
         {children}
